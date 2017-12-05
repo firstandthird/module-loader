@@ -8,7 +8,7 @@ module.exports = async function(opts) {
 
   const schema = {
     path: Joi.string(),
-    renderer: Joi.object().keys({ compile: Joi.func(), render: Joi.func() }).default(nunjucks)
+    compile: Joi.func().default(nunjucks.compile)
   }
   const result = Joi.validate(opts, schema);
   if (result.error) {
@@ -28,7 +28,7 @@ module.exports = async function(opts) {
     for (let x = 0; x < catModules.length; x++) {
       let module = catModules[x];
 
-      modules[cat.name][module.name] = await getModule(module, options.renderer);
+      modules[cat.name][module.name] = await getModule(module, options.compile);
     }
   }
 
