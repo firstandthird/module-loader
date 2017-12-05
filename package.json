@@ -1,0 +1,40 @@
+{
+  "name": "@firstandthird/modules",
+  "version": "1.0.0",
+  "description": "ui module loader",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "joi": "^13.0.2",
+    "nunjucks": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-firstandthird": "^4.1.1",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/modules.git"
+  },
+  "keywords": [
+    "modules",
+    "loader",
+    "ui",
+    "front-end"
+  ],
+  "author": "First and Third",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/modules/issues"
+  },
+  "homepage": "https://github.com/firstandthird/modules#readme",
+  "eslintConfig": {
+    "extends": "firstandthird"
+  }
+}
