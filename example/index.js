@@ -10,5 +10,7 @@ const main = async function() {
   console.log(modules.heros.primary({ headline: 'headline' }));
   console.log('EXTRA');
   console.log(modules.heros.primary({ headline: 'headline', copy: 'copy', extra: 1 }));
-}
+  console.log('SECONDARY');
+  console.log(modules.heros.secondary({ content: { headline: 'headline', copy: 'copy' }, user: { name: 'bob', id: '123' }}));
+};
 main();
