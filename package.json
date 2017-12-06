@@ -1,6 +1,6 @@
 {
   "name": "@firstandthird/module-loader",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ui module loader",
   "main": "index.js",
   "directories": {
@@ -26,7 +26,8 @@
     "modules",
     "loader",
     "ui",
-    "front-end"
+    "front-end",
+    "nunjucks"
   ],
   "author": "First and Third",
   "license": "MIT",
