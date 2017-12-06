@@ -1,5 +1,5 @@
 {
-  "name": "@firstandthird/modules",
+  "name": "@firstandthird/module-loader",
   "version": "1.0.0",
   "description": "ui module loader",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/modules.git"
+    "url": "git+https://github.com/firstandthird/module-loader.git"
   },
   "keywords": [
     "modules",
@@ -31,9 +31,9 @@
   "author": "First and Third",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/firstandthird/modules/issues"
+    "url": "https://github.com/firstandthird/module-loader/issues"
   },
-  "homepage": "https://github.com/firstandthird/modules#readme",
+  "homepage": "https://github.com/firstandthird/module-loader#readme",
   "eslintConfig": {
     "extends": "firstandthird"
   }
