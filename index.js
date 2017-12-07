@@ -5,7 +5,8 @@ const getModule = require('./lib/getModule');
 
 module.exports = async function(opts) {
   const schema = {
-    path: Joi.string()
+    path: Joi.string(),
+    env: Joi.any()
   };
   const result = Joi.validate(opts, schema);
   if (result.error) {
@@ -25,7 +26,7 @@ module.exports = async function(opts) {
     for (let x = 0; x < catModules.length; x++) {
       let module = catModules[x];
 
-      modules[cat.name][module.name] = await getModule(module, options.compile);
+      modules[cat.name][module.name] = await getModule(module, { env: options.env });
     }
   }
 
