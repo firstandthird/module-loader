@@ -12,6 +12,8 @@ const main = async function() {
   console.log(modules.heros.primary.render({ headline: 'headline', copy: 'copy', extra: 1 }));
   console.log('SECONDARY');
   console.log(modules.heros.secondary.render({ content: { headline: 'headline', copy: 'copy' }, user: { name: 'bob', id: '123' }}));
+  console.log('SECONDARY MULTIPLE ARGS');
+  console.log(modules.heros.secondary.render({ content: { headline: 'headline', copy: 'copy' } }, { user: { name: 'bob', id: '123' }}));
   console.log('EXAMPLE');
   console.log(modules.heros.primary.example());
 };
