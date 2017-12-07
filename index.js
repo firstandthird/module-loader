@@ -2,14 +2,11 @@ const Joi = require('joi');
 const getCategories = require('./lib/getCategories');
 const getModules = require('./lib/getModules');
 const getModule = require('./lib/getModule');
-const nunjucks = require('nunjucks');
 
 module.exports = async function(opts) {
-
   const schema = {
-    path: Joi.string(),
-    compile: Joi.func().default(nunjucks.compile)
-  }
+    path: Joi.string()
+  };
   const result = Joi.validate(opts, schema);
   if (result.error) {
     throw result.error;
