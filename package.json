@@ -1,6 +1,6 @@
 {
   "name": "@firstandthird/module-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ui module loader",
   "main": "index.js",
   "directories": {
