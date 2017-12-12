@@ -6,7 +6,8 @@ const getModule = require('./lib/getModule');
 module.exports = async function(opts) {
   const schema = {
     path: Joi.string(),
-    env: Joi.any()
+    env: Joi.any(),
+    log: Joi.func().default(console.log) //eslint-disable-line no-console
   };
   const result = Joi.validate(opts, schema);
   if (result.error) {
@@ -18,17 +19,17 @@ module.exports = async function(opts) {
 
   const modules = {};
   for (let i = 0; i < categories.length; i++) {
-    let cat = categories[i];
+    const cat = categories[i];
     modules[cat.name] = {};
 
-    let catModules = await getModules(cat);
+    const catModules = await getModules(cat);
 
     for (let x = 0; x < catModules.length; x++) {
-      let module = catModules[x];
+      const module = catModules[x];
 
-      modules[cat.name][module.name] = await getModule(module, { env: options.env });
+      modules[cat.name][module.name] = await getModule(module, { env: options.env, log: options.log });
     }
   }
 
   return modules;
-}
+};
