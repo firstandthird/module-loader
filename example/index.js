@@ -21,6 +21,6 @@ const main = async function() {
   console.log(modules.heros.secondary.render({ content: { headline: 'headline', copy: 'copy' } }, { user: { name: 'bob', id: '123' } }));
   console.log('');
   console.log('EXAMPLE');
-  console.log(modules.heros.primary.example());
+  console.log(modules.heros.primary.example('<div class="wrapper">', '</div>'));
 };
 main();
