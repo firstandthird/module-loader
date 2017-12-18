@@ -3,7 +3,8 @@ const moduleLoader = require('../');
 
 const main = async function() {
   const modules = await moduleLoader({
-    path: `${__dirname}/modules`
+    path: `${__dirname}/modules`,
+    debug: true
   });
   console.log('GOOD');
   console.log(modules.heros.primary.render({ headline: 'headline', copy: 'copy' }));

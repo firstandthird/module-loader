@@ -7,6 +7,7 @@ module.exports = async function(opts) {
   const schema = {
     path: Joi.string(),
     env: Joi.any(),
+    debug: Joi.boolean().default(false),
     log: Joi.func().default(console.log) //eslint-disable-line no-console
   };
   const result = Joi.validate(opts, schema);
@@ -27,7 +28,11 @@ module.exports = async function(opts) {
     for (let x = 0; x < catModules.length; x++) {
       const module = catModules[x];
 
-      modules[cat.name][module.name] = await getModule(module, { env: options.env, log: options.log });
+      modules[cat.name][module.name] = await getModule(module, {
+        env: options.env,
+        log: options.log,
+        debug: options.debug
+      });
     }
   }
 
