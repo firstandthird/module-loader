@@ -24,5 +24,7 @@ const main = async function() {
   console.log(modules.heros.primary.example('<div class="wrapper">', '</div>'));
   console.log('EXAMPLE 2');
   console.log(modules.heros.secondary.example('<div class="wrapper">', '</div>'));
+  console.log('EXAMPLE NOT SAFE');
+  console.log(modules.heros.primary.example('', '', false));
 };
 main();
