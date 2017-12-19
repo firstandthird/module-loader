@@ -22,10 +22,12 @@ const main = async function() {
   console.log(modules.heros.secondary.render({ content: { headline: 'headline', copy: 'copy' } }, { user: { name: 'bob', id: '123' } }));
   console.log('');
   console.log('EXAMPLE');
-  console.log(modules.heros.primary.example('<div class="wrapper">', '</div>'));
+  console.log(modules.heros.primary.example());
   console.log('EXAMPLE 2');
-  console.log(modules.heros.secondary.example('<div class="wrapper">', '</div>'));
+  console.log(modules.heros.secondary.example());
   console.log('EXAMPLE NOT SAFE');
-  console.log(modules.heros.primary.example('', '', false));
+  console.log(modules.heros.primary.example(false));
+  console.log('EXAMPLE DATA');
+  console.log(modules.heros.primary.exampleData);
 };
 main();
