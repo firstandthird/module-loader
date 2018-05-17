@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const moduleLoader = require('../');
 
-const main = async function() {
+const main = async function () {
   const modules = await moduleLoader({
     path: `${__dirname}/modules`,
     debug: true
@@ -25,5 +25,9 @@ const main = async function() {
   console.log(modules.heros.primary.getExamples());
   console.log('EXAMPLE 2');
   console.log(modules.heros.secondary.getExamples());
+  console.log('DESCRIBE SCHEMA 1');
+  console.log(modules.heros.primary.describe());
+  console.log('DESCRIBE SCHEMA 2');
+  console.log(modules.heros.secondary.describe());
 };
 main();
