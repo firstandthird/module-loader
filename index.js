@@ -10,7 +10,7 @@ module.exports = async function(opts) {
     debug: Joi.boolean().default(false),
     log: Joi.func().default(console.log) //eslint-disable-line no-console
   };
-  const result = Joi.validate(opts, schema);
+  const result = Joi.object(schema).validate(opts);
   if (result.error) {
     throw result.error;
   }
