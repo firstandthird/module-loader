@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi');
+const Joi = require('joi');
 const getCategories = require('./lib/getCategories');
 const getModules = require('./lib/getModules');
 const getModule = require('./lib/getModule');
