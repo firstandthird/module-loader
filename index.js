@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi');
+const Joi = require('joi');
 const getCategories = require('./lib/getCategories');
 const getModules = require('./lib/getModules');
 const getModule = require('./lib/getModule');
@@ -10,7 +10,7 @@ module.exports = async function(opts) {
     debug: Joi.boolean().default(false),
     log: Joi.func().default(console.log) //eslint-disable-line no-console
   };
-  const result = Joi.validate(opts, schema);
+  const result = Joi.object(schema).validate(opts);
   if (result.error) {
     throw result.error;
   }
